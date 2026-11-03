@@ -1,1 +1,19 @@
+name: Send Discord message
 
+on:
+  workflow_dispatch:
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send message to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl --fail-with-body \
+            -H "Content-Type: application/json" \
+            -d '{"content":"Hello from GitHub Actions!"}' \
+            "$DISCORD_WEBHOOK_URL"
+
+        
