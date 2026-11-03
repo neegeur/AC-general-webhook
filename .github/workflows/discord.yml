@@ -15,5 +15,3 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"content":"Hello from GitHub Actions!"}' \
             "$DISCORD_WEBHOOK_URL"
-
-        
