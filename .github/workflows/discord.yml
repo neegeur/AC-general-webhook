@@ -13,5 +13,5 @@ jobs:
         run: |
           curl --fail-with-body \
             -H "Content-Type: application/json" \
-            -d '{"content":"Hello from GitHub Actions!"}' \
+            -d '{"content":"test pls work"}' \
             "$DISCORD_WEBHOOK_URL"
